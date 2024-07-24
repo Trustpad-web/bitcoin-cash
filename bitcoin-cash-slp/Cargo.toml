@@ -1,0 +1,14 @@
+[package]
+name = "bitcoin-cash-slp"
+version = "1.0.0-beta.0"
+authors = ["tobiasruck <ruck.tobias@gmail.com>"]
+edition = "2018"
+license = "MIT"
+description = "A library for creating SLP transactions"
+homepage = "https://github.com/be-cash/bitcoin-cash"
+documentation = "https://github.com/be-cash/bitcoin-cash"
+repository = "https://github.com/be-cash/bitcoin-cash"
+
+[dependencies]
+bitcoin-cash = {path="../bitcoin-cash", version="1.0.0-beta.0"}
+serde = { version="1.0", features=["derive"] }

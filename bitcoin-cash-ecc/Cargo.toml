@@ -1,0 +1,26 @@
+[package]
+name = "bitcoin-cash-ecc"
+version = "1.0.0-beta.0"
+authors = ["tobiasruck <ruck.tobias@gmail.com>"]
+edition = "2018"
+license = "MIT"
+description = "Elliptic curve cryptography library for the bitcoin-cash library"
+homepage = "https://github.com/be-cash/bitcoin-cash"
+documentation = "https://github.com/be-cash/bitcoin-cash"
+repository = "https://github.com/be-cash/bitcoin-cash"
+
+[dependencies]
+bitcoin-cash = {path="../bitcoin-cash", version="1.0.0-beta.0"}
+
+[features]
+default = ["c_ecc"]
+rust_ecc = ["libsecp256k1"]
+c_ecc = ["secp256k1"]
+
+[dependencies.libsecp256k1]
+version = "0.3"
+optional = true
+
+[dependencies.secp256k1]
+version = "0.19.0"
+optional = true
